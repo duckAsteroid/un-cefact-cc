@@ -1,0 +1,26 @@
+plugins {
+    // up-to-date version checker utility
+    id "com.github.ben-manes.versions" version "0.29.0"
+    // lombok plugin
+    id "io.freefair.lombok" version "5.1.0" apply false
+}
+
+apply plugin: 'java'
+
+description = "A JSR385 extension library for working with UN CEFACT Common Codes for units"
+version = "0.0.1"
+group = "com.asteroid.duck"
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+dependencies {
+    // units of measure API
+    implementation group: 'javax.measure', name: 'unit-api', version: '2.0'
+    implementation 'tech.units:indriya:2.0.4'
+}

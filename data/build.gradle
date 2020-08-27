@@ -1,0 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'io.freefair.lombok'
+
+dependencies {
+    // Apache POI for Excel reading/parsing
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+    // SLF4J for logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+}
